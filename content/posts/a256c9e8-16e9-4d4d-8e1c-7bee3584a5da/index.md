@@ -4,7 +4,11 @@ date = 2023-10-10T22:03:53+02:00
 draft = false
 +++
 
+# Introduction
+
 During my daily blue-team operations I stumbled across a series of similar infection chains, all started with an infected thumb drive. Since the installed security solution detected with a generic signature the threat but didn't block it, I took charge of the alerts and decided to deep dive and analyze the sample. What I've discovered, with the help of my colleagues, is a worm which uses the streaming platform Vimeo to host its payload.
+
+# Analysis
 
 The initial access vector it's an infected USB stick, used to transfer files to a copy shop, containing the following files:
 
@@ -41,6 +45,8 @@ Reading trought the code reveals some interesting facts:
 - `44Wk` is the Base64 encoding of `ㅤ` (`U+3164`) which is exactly the name of the blank and hidden folder on the USB stick; in fact, the folder presence in pair with the command `Test-Path` is used to prevent the script from executing if the folder do not exists; a clever anti-sandbox tecnique
 
 ![](images/unicode_char.png)
+
+[Hangul](https://en.wikipedia.org/wiki/Hangul) is the modern official writing system for the Korean language.
 
 ![](images/unicode_char_bin.png)
 

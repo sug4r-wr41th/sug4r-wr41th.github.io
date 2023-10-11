@@ -1,6 +1,8 @@
 name,type,value
 E (9GB).lnk,sha256,c626e59bf85c006334ced82bda0b1a83fa720b0f455db1a040b47caf02a45b4c
 explorer.ps1,sha256,8b1cd7700f0ca6cfd0bf1a291bf44074cd8fcbc6c0440a09d43422a5cc7fc3bb
-Vimeo video URL,url,https[:]//vimeo.com/api/v2/video/804838895.json
+Vimeo video,url,https[:]//vimeo.com/804838895
+Vimeo video meta-data,url,https[:]//vimeo.com/api/v2/video/804838895.json
+Vimeo user,url,https[:]//vimeo.com/user195838396
 Runtime Broker.exe,sha256,a4f20b60a50345ddf3ac71b6e8c5ebcb9d069721b0b0edc822ed2e7569a0bb40
 compromised site,domain,evinfeoptasw.dedyn[.]io
