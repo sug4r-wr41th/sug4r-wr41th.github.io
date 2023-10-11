@@ -5,4 +5,10 @@ defaultContentLanguageInSubdir: false
 title: sug4r-wr41th's Blog
 
 theme: PaperMod
-comments: false
+params:
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+  author: ["Me"]
+  comments: false
