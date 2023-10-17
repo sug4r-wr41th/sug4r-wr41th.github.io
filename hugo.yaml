@@ -2,6 +2,7 @@ baseURL: 'https://sug4r-wr41th.github.io/'
 languageCode: en-us
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
+enableRobotsTXT: true
 title: sug4r-wr41th's Blog
 
 theme: PaperMod
