@@ -3,6 +3,8 @@ languageCode: en-us
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
+sitemap:
+  filename: sitemap.xml
 title: sug4r-wr41th's Blog
 
 theme: PaperMod
