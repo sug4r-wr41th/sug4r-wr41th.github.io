@@ -12,7 +12,7 @@ During my daily blue-team operations I stumbled across a series of similar infec
 
 The initial access vector it's an infected USB stick, used to transfer files to a copy shop, containing the following files:
 
-![USB Drive Content](images/usb_drive_content.png)
+![USB drive content](images/usb_drive_content.png)
 
 - `E (9GB).lnk` it's a shortcut file
 - `explorer.ps1` it's a PowerShell script, hidden
@@ -36,7 +36,7 @@ which leads to a first stage PowerShell script that, for the sake of simplicity,
 
 Reading trought the code reveals some interesting facts:
 
-- the script makes a web request to Vimeo's streaming services, searching for a specific video meta-data; the response is extracted with a regular expression and decrypted using AES with the initialization vector and the symmetic key are hard-coded into the script; the whole process undergoes an additional stage.
+- the script makes a web request to Vimeo's streaming services, searching for a specific video meta-data; the response is extracted with a regular expression and decrypted using AES with the initialization vector and the symmetic key hard-coded into the script; the whole process undergoes an additional stage
 
 ![Video video not found](images/vimeo_video.png)
 
@@ -61,7 +61,7 @@ Some findings:
 - the folder trick is used again
 - the `$uuid` variable is written to a file on disk
 - the `$uuid` variable is appended to the drop url and a web request is made; the response is written to a file named `Runtime Broker.exe` and saved into the user temporary folder, then the script waits for five seconds
-- if `%PROGRAMFILES%\WinSoft Update Service\pythonw.exe` exists the script terminates immediately, otherwise the script waits for one second then `Runtime Broker.exe` is launched; this could be a kill switch implemented by the attacker during development in order to avoid auto-infection
+- if `%PROGRAMFILES%\WinSoft Update Service\pythonw.exe` exists the script terminates immediately, otherwise the script waits for one second then launches `Runtime Broker.exe`; this could be a kill switch implemented by the attacker during development in order to avoid auto-infection
 
 At the time of analysis, I was unable to download the file but fortunately I managed to retrieve it from the security solution.
 
