@@ -1,5 +1,5 @@
 +++
-title = 'The Dark Side of Vimeo: video meta-data contains PowerShell script and leads to host compromise'
+title = 'The dark side of Vimeo: video meta-data contains PowerShell script and leads to host compromise'
 date = 2023-10-10T22:03:53+02:00
 draft = false
 +++
@@ -10,7 +10,7 @@ During my daily blue-team operations I stumbled across a series of similar infec
 
 # Analysis
 
-The initial access vector it's an infected USB stick, used to transfer files to a copy shop, containing the following files:
+The initial access vector is an infected USB stick, used to transfer files to a copy shop, containing the following files:
 
 ![](images/usb_drive_content.png)
 
@@ -18,7 +18,7 @@ The initial access vector it's an infected USB stick, used to transfer files to 
 - `explorer.ps1` it's a PowerShell script, hidden
 - `ㅤ` (`U+3164`) it's an empty folder, hidden
 
-Opening `E (9GB).lnk`'s "Properties" window reveals what seems obvious: the execution target is `explorer.ps1`. What seems odd it's that E: is not the mount point of the thumb drive on the victim machine; a good guess is that E: it's (or better, was) the mount point of the thumb drive on the infected machine, presumably a computer at the copy shop.
+Opening `E (9GB).lnk`'s properties shows what seems obvious: the execution target is `explorer.ps1`. What seems odd it's that `E:` is not the mount point of the thumb drive on the victim machine; a good guess is that `E:` it's (or better, was) the mount point of the thumb drive on the infected machine, presumably a computer at the copy shop.
 
 ![](images/shortcut_properties.png)
 
@@ -26,7 +26,7 @@ Let's take a look at the PowerShell script:
 
 ![](images/0_stage_powershell_script.png)
 
-which, using CyberChef or similar tools, can be easily deobfuscated by extracting, reversing, joining and converting the string passed as argument to `FromBase64String` function:
+which, using CyberChef or similar tools, can be easily deobfuscated by extracting, reversing, joining and converting the strings passed as argument to `FromBase64String` function:
 
 ![](images/0_stage_powershell_script_clean.png)
 
@@ -52,7 +52,7 @@ Reading trought the code reveals some interesting facts:
 
 ![](images/unicode_char_anti_sandbox.png)
 
-To review the second stage, I simply printed it instead of running it.
+To review the second stage, just print it instead of running it.
 
 ![](images/2_stage_powershell_script_clean.png)
 
@@ -75,7 +75,7 @@ Detonating the file with [VirusTotal](https://www.virustotal.com/gui/file/a4f20b
 
 # Conclusion
 
-As removable drives remain popular amoung users as an easy way to share files with colleagues and suppliers, attackers will continue to use them as infection vectors, using novel techniques to trick users into clicking on stuff.
+As removable drives remain popular among users as an easy way to share files with colleagues and suppliers, attackers will continue to use them as infection vectors, using novel techniques to trick users into clicking on stuff.
 
 # IOCs
 
