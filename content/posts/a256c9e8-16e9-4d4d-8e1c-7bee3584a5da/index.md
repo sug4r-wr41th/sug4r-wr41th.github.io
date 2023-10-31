@@ -79,4 +79,12 @@ As removable drives remain popular among users as an easy way to share files wit
 
 # IOCs
 
-Available [here](iocs.csv).
+| Description | Type | Value |
+|-------------|------|-------|
+|E (9GB).lnk|SHA256|c626e59bf85c006334ced82bda0b1a83fa720b0f455db1a040b47caf02a45b4c
+|explorer.ps1|SHA256|8b1cd7700f0ca6cfd0bf1a291bf44074cd8fcbc6c0440a09d43422a5cc7fc3bb
+|Vimeo video|URL|h++ps://vimeo.com/804838895
+|Vimeo video|URL|h++ps://vimeo.com/api/v2/video/804838895.json
+|Vimeo user|URL|h++ps://vimeo.com/user195838396
+|Runtime Broker.exe|SHA256|a4f20b60a50345ddf3ac71b6e8c5ebcb9d069721b0b0edc822ed2e7569a0bb40
+|.exe hosting infrastructure|domain|evinfeoptasw.dedyn[.]io
