@@ -58,4 +58,11 @@ As e-mails remain the go-to solution amoung users as an easy way to share files 
 
 # IOCs
 
-Available [here](iocs.csv).
+| Description | Type | Value |
+|-------------|------|-------|
+|X251.js|SHA256|038967b35c6afb30d4df31173511814478f563732239c61e1a42b90971b4ba80
+|link|URL|h++ps://aloestorecanarias.com/rt/?30368931
+|link|URL|h++ps://aloestorecanarias.com/rt/?dmLtEjKMj1=30368931
+|.dll hosting infrastructure|IP|65.108.81.144
+|C2|IP|155.138.156.94
+|C2|IP|154.221.30.136
