@@ -2,6 +2,8 @@
 title = 'Click me to the moon: counterfeit invoice archive contains JavaScript dropper and leads to host compromise'
 date = 2023-10-26T22:03:53+02:00
 draft = false
+categories = ["Malware Analysis"]
+tags = ["JavaScript"]
 +++
 
 # Introduction
