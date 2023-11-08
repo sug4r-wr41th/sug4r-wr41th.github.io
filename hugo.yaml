@@ -15,3 +15,18 @@ params:
   ShowToc: true
   author: ["Me"]
   comments: false
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: GitHub
+      name: GitHub
+      url: https://github.com/sug4r-wr41th
+      weight: 30
