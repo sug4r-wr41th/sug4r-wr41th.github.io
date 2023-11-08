@@ -2,6 +2,8 @@
 title = 'The dark side of Vimeo: video meta-data contains PowerShell script and leads to host compromise'
 date = 2023-10-10T22:03:53+02:00
 draft = false
+categories = ["Malware Analysis"]
+tags = ["PowerShell"]
 +++
 
 # Introduction
