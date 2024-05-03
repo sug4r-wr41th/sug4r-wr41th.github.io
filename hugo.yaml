@@ -7,8 +7,15 @@ sitemap:
   filename: sitemap.xml
 title: sug4r-wr41th's Blog
 
+services:
+  rss:
+    limit: -1
+
 theme: PaperMod
 params:
+  socialIcons:
+    - name: "rss"
+      url: "https://sug4r-wr41th.github.io/index.xml"
   ShowShareButtons: true
   ShowReadingTime: true
   ShowBreadCrumbs: true
@@ -30,3 +37,7 @@ menu:
       name: GitHub
       url: https://github.com/sug4r-wr41th
       weight: 30
+    - identifier: RSS
+      name: RSS Feed
+      url: /index.xml
+      weight: 40
