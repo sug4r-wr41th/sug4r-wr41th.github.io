@@ -25,6 +25,7 @@ params:
   ShowShareButtons: true
   ShowReadingTime: true
   ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
   ShowToc: true
   author: ["Me"]
   comments: false
