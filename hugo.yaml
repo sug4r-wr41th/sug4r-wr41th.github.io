@@ -36,6 +36,10 @@ menu:
     - identifier: Search
       name: Search
       url: /search
+      weight: 1
+    - identifier: Archive
+      name: Archive
+      url: /archive/
       weight: 5
     - identifier: categories
       name: Categories
